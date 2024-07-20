@@ -14,10 +14,15 @@ githubApi.interceptors.response.use(
     (error) => errorInterceptor(error)
 );
 
+let currentUserName: string = "eduardoromeu";
+let currentUser: GithubUser;
+
 /* Methods */
 
 const getUser = async(userName: string, setUser: Function) => {
     const res: AxiosResponse = await githubApi.get(`/users/${userName}`);
+    currentUserName = userName;
+    currentUser = res.data;
     setUser(res.data);
 }
 
@@ -69,4 +74,4 @@ function formatPagination(headerLinks: string | undefined): GithubPagination{
     return pagination;
 }
 
-export { githubApi, getUser, getRepos };
+export { githubApi, getUser, getRepos, currentUserName, currentUser };

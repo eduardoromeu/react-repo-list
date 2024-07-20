@@ -38,7 +38,7 @@ export default function Repos() {
 
     return (
         <Fragment>
-            <Container fluid as={Row} wrap="true">
+            <Container fluid as={Row} wrap="true" className="mb-2">
                 <Col className="mb-2" md={12} lg={4}>
                     <User user={user} setUser={setUser} />
                 </Col>
