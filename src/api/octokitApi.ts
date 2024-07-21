@@ -5,7 +5,7 @@ const octokit = new Octokit({
 
     auth: "",
     userAgent: 'eduardoromeu.github.io',
-    baseUrl: "https://eduardoromeu.github.io/",
+    baseUrl: "https://eduardoromeu.github.io/react-repo-list/",
 
     // log: {
     //     debug: () => {},
